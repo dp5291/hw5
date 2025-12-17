@@ -1,0 +1,62 @@
+<!--File: main.js
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Dhruvkumar Patel, UMass Lowell Computer Science, Dhruvkumar_patel1@student.uml.edu
+Copyright (c) 2025 by Dhruvkumar. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by DP on 12/17, 2025
+Description: The One Line Scrabble game interface is defined in thos file. It consists of 
+the score panel, game control buttons, the one-line Scrabble board, and the player's tile rack.
+It also links external libraries (jQuery and jQuery UI), css and javascript filr that controls game logic.
+citation:
+https://jqueryui.com/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HW5 - One Line Scrabble</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <h1>One Line Scrabble (HW5)</h1>
+
+  <div class="panel">
+    <div class="scorebox">
+      <div><b>Word score:</b> <span id="wordScore">0</span></div>
+      <div><b>Total score:</b> <span id="totalScore">0</span></div>
+      <div><b>Tiles remaining:</b> <span id="tilesRemaining">0</span></div>
+      <div id="errorMsg" style="color:red; margin-top:8px;"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="btnNext">Next Word</button>
+      <button id="btnRestart">Restart Game</button>
+    </div>
+  </div>
+
+  <h2>Board (one line)</h2>
+  <div id="boardWrapper">
+    <img src="graphics_data/graphics_data/Scrabble_Board_OneLine.png"
+         alt="Scrabble Board"
+         id="boardImage">
+    <div id="board"></div>
+  </div>
+
+  <h2>Rack (7 tiles)</h2>
+  <div id="rackWrapper">
+    <img src="graphics_data/graphics_data/scrabble-tile-holder-406774_640.png"
+         alt="Tile Holder"
+         id="rackImage">
+    <div id="rack"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

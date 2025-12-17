@@ -1,0 +1,121 @@
+/* File: style.css
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Dhruvkumar Patel, UMass Lowell Computer Science, Dhruvkumar_patel1@student.uml.edu
+Copyright (c) 2025 by Dhruvkumar. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by DP on 12/17, 2025
+Description: This file has the basic visual layout for one line Scrabble game.
+It positions the board and rack images, alings the drag-and-drop areas, style tiles,
+buttons, and score panels. CSS grid is used to accurately align board squares and rack slots
+with their background images.
+citation: https://www.w3schools.com/cssref/pr_grid-template-columns.php
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 18px;
+  background-color: lightpink;
+  
+}
+  
+.panel {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+  
+.scorebox {
+  padding: 10px 12px;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 220px;
+}
+  
+.buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+}
+  
+  
+#boardWrapper {
+  position: relative;
+  width: 960px;
+  margin-bottom: 24px;
+}
+  
+#boardImage {
+  width: 960px;
+  display: block;
+}
+  
+#board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 960px;
+  height: 80px;
+  
+  display: grid;
+  grid-template-columns: repeat(15, 64px);
+  gap: 0;
+}
+  
+  
+.square {
+  width: 64px;
+  height: 80px;
+  background: transparent;
+  border: none;
+  position: relative;
+  pointer-events: auto;
+}
+  
+#rackWrapper {
+  position: relative;
+  width: 570px;
+}
+  
+#rackImage {
+  width: 570px;
+  display: block;
+}
+  
+#rack {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 70px);
+  gap: 6px;
+}
+  
+.rackSlot {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.tile {
+  width: 62px;
+  height: 62px;
+  cursor: grab;
+}
+  
+.dropHover {
+  outline: 3px solid #4a90e2;
+  outline-offset: 2px;
+}
+  
+.hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+  
